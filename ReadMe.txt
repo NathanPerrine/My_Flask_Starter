@@ -1,9 +1,10 @@
-Copying this repository should give you a starter flask application with a working user_login
+Copying this repository (and following a few steps) should give you a starter flask application with a working user_login
 To remove the user section, delete the auth blueprint, and any references to the login / sign up pages
 
 
 Step 0: Tutorial
 ---- https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+---- https://elemental-flat-e5b.notion.site/The-Ultimate-Flask-Tutorial-111c0b0b64d9449a8e4aefea44d60a66
 
 Step 1: Create a python virtual environment
 ---- python -m venv {venv_name}
@@ -25,12 +26,13 @@ Step 3: Requirements
 
 Step 4: .gitignore
 ----Update your gitignore file to not track:
-    ----{venv_name}/ <---- Change name to your venv name
-    ----__pycache__/
-    ----.env
-    ----app.db
+    ---- {venv_name}/ <---- Change name to your venv name
+    ---- __pycache__/
+    ---- .env
+    ---- app.db
 
 Step 5: .env 
+---- Create a file called '.env' in the top level folder
 ---- FLASK_APP=run.py
      FLASK_ENV=development
      SECRET_KEY=
@@ -46,7 +48,7 @@ Step 6: templates / base.html
 ---- Edit Title 
 ---- Edit Nav Bar 
     ---- Currently is set to bootstrap navbar - light, bottom border, collapses on small screens 
-    ---- Separates the sign up / login to the right of the page
+    ---- Separates the sign up / login / logout to the right of the page
     ---- Has several jinja is authenticated checks to change the navbar options
 
 
