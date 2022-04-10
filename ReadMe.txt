@@ -44,7 +44,13 @@ Step 5: .env
     ---- https://www.elephantsql.com/
     ---- Make sure url starts with "postgresql"
 
-Step 6: templates / base.html
+Step 6: Database Migration
+---- in the terminal:
+        flask db init
+        flask db migrate
+        flask db upgrade
+
+Step 7: templates / base.html
 ---- Edit Title 
 ---- Edit Nav Bar 
     ---- Currently is set to bootstrap navbar - light, bottom border, collapses on small screens 

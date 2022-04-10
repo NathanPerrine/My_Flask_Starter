@@ -15,6 +15,7 @@ def signup():
         password = form.password.data 
 
         # Check if user already exists 
+        # .ilike() is case insensitive 
         user_already_exists = User.query.filter((User.username.ilike(username)) | (User.email.ilike(email))).all()
         if user_already_exists:
             # If taken, flash warning message, redirect
@@ -40,7 +41,7 @@ def login():
         if user and user.check_password(password):
             login_user(user)
             flash(f"{user} has successfully logged in.", "success")
-            return redirect(url_for('shop.index'))
+            return redirect(url_for('home.index'))
         else:
             flash("Username and/or password is incorrect.")
     return render_template('login.html', title = title, form = form)
