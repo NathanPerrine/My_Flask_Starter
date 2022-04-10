@@ -6,6 +6,17 @@ Step 0: Tutorial
 ---- https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 ---- https://elemental-flat-e5b.notion.site/The-Ultimate-Flask-Tutorial-111c0b0b64d9449a8e4aefea44d60a66
 
+Step 0.5: Pulling from git
+---- Open a terminal in the folder/directory you want this starter in 
+---- enter the following lines:
+	---- git init 
+		 git remote add starter https://github.com/NathanPerrine/My_Flask_Starter
+		 git remote -v 
+			---- Checks to see if the new remote is correctly added
+		 git pull starter main
+		 git remote rm starter 
+			---- Removes the remote you just created (no longer needed)
+
 Step 1: Create a python virtual environment
 ---- python -m venv {venv_name}
 
@@ -30,6 +41,7 @@ Step 4: .gitignore
     ---- __pycache__/
     ---- .env
     ---- app.db
+---- If you have 1k+ untracked changes in your source control you didn't set your own venv_name
 
 Step 5: .env 
 ---- Create a file called '.env' in the top level folder
@@ -43,6 +55,7 @@ Step 5: .env
      DATABASE_URL={link to database}
     ---- https://www.elephantsql.com/
     ---- Make sure url starts with "postgresql"
+		---- add 'ql' to the end of the 'postgres' at the beginning of the url
 
 Step 6: Database Migration
 ---- in the terminal:
@@ -52,12 +65,13 @@ Step 6: Database Migration
 
 Step 7: templates / base.html
 ---- Edit Title 
+	---- Change base.html title tag to your name	
 ---- Edit Nav Bar 
     ---- Currently is set to bootstrap navbar - light, bottom border, collapses on small screens 
     ---- Separates the sign up / login / logout to the right of the page
     ---- Has several jinja is authenticated checks to change the navbar options
-
-
+	---- Update brand name, and name of links when you have them, if not needed remove the a-tag
+	
 
 
 Step x: Blueprints
