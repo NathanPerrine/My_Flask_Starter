@@ -50,7 +50,7 @@ Step 5: .env
      SECRET_KEY=
      ---- In the terminal enter 'python'
           import os 
-          os.urandom(24)
+          base64.b64encode(os.urandom(24)).decode('utf-8)
           copy new secret_key
      DATABASE_URL={link to database}
     ---- https://www.elephantsql.com/
